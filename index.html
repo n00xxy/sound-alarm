@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宿直用 サウンド監視アラーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>サウンド監視アラーム</h1>
+        <div id="status">待機中...</div>
+        <div class="volume-container"><div id="volume-bar"></div></div>
+        <div class="controls">
+            <button id="startButton">監視を開始</button>
+            <button id="stopButton" disabled>監視を停止</button>
+            <button id="resetAlarmButton" hidden>アラームを停止</button>
+        </div>
+        <div class="settings">
+            <label for="threshold">検知しきい値:</label>
+            <input type="range" id="threshold" min="0" max="100" value="20">
+            <span id="threshold-value">20</span>
+            <br>
+            <label for="volume">アラーム音量:</label>
+            <input type="range" id="volume" min="0" max="100" value="100">
+            <span id="volume-value">100</span>
+        </div>
+        <div class="log-container">
+            <h2>検出ログ</h2>
+            <ol id="logList"></ol>
+        </div>
+    </div>
+    <audio id="alarmAudio" src="alarm.mp3" loop></audio>
+    <script src="script.js"></script>
+</body>
+</html>

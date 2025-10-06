@@ -1,0 +1,35 @@
+body {
+    font-family: sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    text-align: center;
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+}
+h1 { margin-bottom: 20px; }
+#status { font-size: 1.2em; min-height: 1.5em; margin-bottom: 20px; }
+.volume-container { width: 100%; height: 30px; background-color: #444; border-radius: 15px; overflow: hidden; margin-bottom: 20px; }
+#volume-bar { width: 0%; height: 100%; background-color: #4CAF50; transition: width 0.1s; }
+button { font-size: 1em; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer; background-color: #007BFF; color: white; }
+button:disabled { background-color: #555; cursor: not-allowed; }
+#resetAlarmButton {
+    background-color: #f0ad4e; /* オレンジ色 */
+    color: #1a1a1a;
+}
+.settings { margin-top: 20px; }
+.log-container { margin-top: 20px; text-align: left; max-height: 150px; overflow-y: auto; background-color: #1a1a1a; border: 1px solid #444; border-radius: 5px; padding: 10px; }
+.log-container h2 { margin-top: 0; font-size: 1.2em; }
+#logList { padding-left: 20px; margin: 0; list-style-type: decimal; }
+#logList li { padding: 2px 0; border-bottom: 1px solid #333; }
+#logList li:last-child { border-bottom: none; }
